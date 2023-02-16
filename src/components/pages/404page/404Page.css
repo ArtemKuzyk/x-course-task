@@ -1,0 +1,12 @@
+.no-found-error-section{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20%;
+}
+
+.no-found-error-section h3{
+    font-size: 32px;
+}

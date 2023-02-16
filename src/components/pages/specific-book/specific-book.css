@@ -1,0 +1,158 @@
+@media screen and (min-width: 320px) {
+    .specific-book-section {
+      font-size: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 95%;
+      margin: 2.5%;
+    }
+    .specific-book-section > .container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .specific-book-section > .container .book-main-info {
+      width: 100%;
+      text-align: center;
+    }
+    .specific-book-section > .container .book-main-info section {
+      width: 100%;
+    }
+    .specific-book-section > .container section {
+      width: 80%;
+    }
+    .specific-book-section > .container .book-image {
+      width: 100%;
+    }
+    .specific-book-section > .container .book-image img {
+      width: 90%;
+    }
+    .specific-book-section > .container .book-info {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin: 5%;
+      text-align: start;
+      width: 90%!important;
+    }
+    .specific-book-section > .container .book-info .book-info__name {
+      font-weight: bold;
+    }
+    .specific-book-section > .container .prise-section .container {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 50px;
+      position: relative;
+      justify-content: space-between;
+    }
+    .specific-book-section > .container .prise-section .container > * {
+      margin: 15px;
+    }
+    .specific-book-section > .container .prise-section .container > div {
+      display: flex;
+      flex-direction: column;
+    }
+    .specific-book-section > .container .prise-section .container div:last-of-type {
+      align-items: flex-end;
+    }
+    .specific-book-section > .container .prise-section .prise-section__text {
+      font-weight: bold;
+      padding: 4px;
+    }
+    .specific-book-section > .container .prise-section .prise-section__input-field {
+      position: relative;
+    }
+    .specific-book-section > .container .prise-section .prise-section__input-field input[type=number] {
+      border: 1px solid blue;
+      border-radius: 10px;
+      outline: none;
+      width: 50px;
+    }
+    .specific-book-section > .container .prise-section .prise-section__input-field input[type=number]::-webkit-inner-spin-button, .specific-book-section > .container .prise-section .prise-section__input-field input[type=number]::-webkit-outer-spin-button {
+      display: none;
+    }
+    .specific-book-section > .container .prise-section .prise-section__input-field img {
+      height: 50%;
+      position: absolute;
+    }
+    .specific-book-section > .container .prise-section .prise-section__input-field img:first-of-type {
+      border-radius: 0 50% 0 0;
+      right: 0;
+      top: 0;
+    }
+    .specific-book-section > .container .prise-section .prise-section__input-field img:last-of-type {
+      border-radius: 0 0 50% 0;
+      bottom: 0;
+      right: 0;
+    }
+    .specific-book-section > .container .prise-section input[type=button] {
+      bottom: 0;
+      position: absolute;
+      right: 0;
+    }
+    /* .specific-book-section > .container .prise-section a {
+      bottom: 0;
+      position: absolute;
+      right: 0;
+    } */
+  }
+  @media screen and (min-width: 480px) {
+    .specific-book-section {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .specific-book-section > .container {
+      align-items: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .specific-book-section > .container section {
+      width: auto;
+    }
+    .specific-book-section > .container .book-main-info {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      text-align: start;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .specific-book-section .container .book-main-info {
+      max-width: 60%;
+    }
+    .specific-book-section .container section {
+      width: 30%;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .specific-book-section {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .specific-book-section .container section {
+      width: 30%;
+    }
+    .specific-book-section .container .book-image img {
+      width: 90%;
+    }
+  }
+  .icon {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .border-dash {
+    border: 1px dashed #000;
+  }
