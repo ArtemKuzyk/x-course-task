@@ -156,3 +156,8 @@
   .border-dash {
     border: 1px dashed #000;
   }
+
+  .visible-hidden{
+    /* display: none; */
+    visibility: hidden;
+  }

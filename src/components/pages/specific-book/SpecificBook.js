@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
+import cn from 'classnames'
 import { useCart } from "../../../hooks/use-cart";
 import { useUser } from "../../../hooks/use-user";
 import { useSpecificBook } from "../../../hooks/use-specific-book";
@@ -14,20 +15,25 @@ import "./specific-book.css";
 export function SpecificBook(){
     // const {state} = useLocation();
     // const data = state.data;  
-    const {userName, setUserName} = useUser(); 
-    const {specificBook, setSpecificBook} = useSpecificBook();
+    const {userName} = useUser(); 
+    const {specificBook} = useSpecificBook();
     const data = specificBook.data;
     const [count, setCount] = useState(1);
     const [totalPrice, setTotalPrice] = useState(data.price);
     const {bookCartChoice, setBookCartChoice} = useCart();
     const [isActiveAddButton, setIsActiveAddButton] = useState(false);
+    let [visibleClass, setVisibleClass] = useState(true);
+
+    useEffect(() => {
+        if (bookCartChoice[data.id]) {
+            setVisibleClass(false);
+        }
+    }, [bookCartChoice]);
 
     const checkValidValue = (e) => {
         let value = e.target.value;
         setCount(+value);
     }
-
-    
 
     useEffect(() => {
         if(count < 1 ) setCount({});
@@ -93,7 +99,7 @@ export function SpecificBook(){
                             <p className="prise-section__text">price, $</p>
                             <label htmlFor="count" className="prise-section__text">Count</label>
                             <p className="prise-section__text">Toral price</p>
-                            {(bookCartChoice[data.id] ? <p className="prise-section__text">in your cart: <span>{bookCartChoice[data.id].count}</span></p> : null)}
+                            <p className={cn("prise-section__text", { "visible-hidden" : visibleClass })}>in your cart: <span>{bookCartChoice[data.id] ? bookCartChoice[data.id].count : ''}</span></p>
                         </div>
                         <div>
                             <p className="prise-section__text" id="prise">{data.price}</p>
