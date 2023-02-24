@@ -102,20 +102,29 @@ export function SpecificBook(){
                             <p className={cn("prise-section__text", { "visible-hidden" : visibleClass })}>in your cart: <span>{bookCartChoice[data.id] ? bookCartChoice[data.id].count : ''}</span></p>
                         </div>
                         <div>
-                            <p className="prise-section__text" id="prise">{data.price}</p>
+                            <p className="prise-section__text" id="prise" data-testid="price">{data.price}</p>
                             <div className="prise-section__input-field">
                                 <input  type="number" 
                                         pattern="[0-9]{10}"
                                         className="prise-section__text text-align-start prise-section__count"
                                         value={count}
                                         onKeyDown={checkToSymbol}
-                                        onInput={checkValidValue} />
+                                        onInput={checkValidValue} 
+                                        data-testid="book-count" />
                                 {/* <img src={upArrow} alt="&#8657" id="upArrow" onClick={() =>setCount((typeof count === "object" ? 0 : count) + 1)}/>
                                 <img src={downArrow} alt="&#8659" id="downArrow" onClick={() =>setCount((typeof count === "object" ? 0 : count) - 1)}/> */}
-                                <img src={upArrow} alt="&#8657" id="upArrow" onClick={() => setCount(handleChangeCount(true, count))}/>
-                                <img src={downArrow} alt="&#8659" id="downArrow" onClick={() => setCount(handleChangeCount(false, count))}/>
+                                <img src={upArrow} 
+                                     alt="&#8657" 
+                                     id="upArrow" 
+                                     onClick={() => setCount(handleChangeCount(true, count))} 
+                                     data-testid="incrementCounter" />
+                                <img src={downArrow} 
+                                     alt="&#8659" 
+                                     id="downArrow" 
+                                     onClick={() => setCount(handleChangeCount(false, count))}
+                                     data-testid="decrementCounter" />
                             </div>
-                            <p className="prise-section__text" id="total-prise">{totalPrice}</p>
+                            <p className="prise-section__text" id="total-prise" data-testid="totalPrice">{totalPrice}</p>
                         </div>
                         <input type="button" value="Add to cart" className="prise-section__text abs" onClick={addChoiceBook} disabled={isActiveAddButton} />{/*add disabled when value ""*/}
                     </div>
