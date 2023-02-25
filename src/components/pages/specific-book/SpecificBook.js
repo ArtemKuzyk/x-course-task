@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 // import { useLocation } from "react-router-dom";
-import cn from 'classnames'
+import cn from 'classnames';
 import { useCart } from "../../../hooks/use-cart";
 import { useUser } from "../../../hooks/use-user";
 import { useSpecificBook } from "../../../hooks/use-specific-book";

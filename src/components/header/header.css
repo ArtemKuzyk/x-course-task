@@ -22,6 +22,20 @@
   header .user-cart-info input[type=button] {
     height: 40px;
   }
+  header .user-cart-info .cart-button {
+    border: none;
+    background: none;
+    position: relative;
+  }
+  header .user-cart-info .cart-button .cart-counter {
+    background: lightgreen;
+    bottom: 0;
+    border-radius: 50%;
+    margin: 0 20px 0 0;
+    padding: 4px 6px;
+    position: absolute;
+    right: 5px;
+  }
   header .user-cart-info .mini-avatar {
     border: 1px solid #000;
     border-radius: 50%;
@@ -31,6 +45,9 @@
   header .user-cart-info .icon {
     height: 40px;
     width: 40px;
+  }
+  header .user-cart-info .display-none {
+    display: none;
   }
 }
 @media screen and (min-width: 480px) {
