@@ -97,3 +97,7 @@
   hr{
     margin: 0;
   }
+
+img[alt='cart']{
+    cursor: pointer;
+}
