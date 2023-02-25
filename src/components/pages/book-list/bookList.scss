@@ -1,0 +1,158 @@
+.content {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.main-section {
+	.search-bar {
+		margin: 2% 5% 0;
+		display: flex;
+		.search-container {
+			height: inherit;
+			position: relative;
+			.search-container__search-field {
+				border: 3px solid rgb(53, 134, 214);
+				padding: 8px 30px 8px 8px;
+				&:focus-visible {
+					outline: none;
+					background-image: none;
+				}
+			}
+			.search-container__img {
+				height: 100%;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 15%;
+			}
+		}
+	}
+}
+.no-result {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+.no-result__text {
+	font-size: 3em;
+}
+@media screen and (min-width: 320px) {
+	.search-bar {
+		flex-wrap: wrap;
+		>* {
+			margin: 0 0 5px 0;
+		}
+		* {
+			width: 100%;
+		}
+		.search-bar__sort-select-field {
+			position: relative;
+			background-color: rgb(53, 134, 214);
+			color: #ffffff;
+			padding: 8px 16px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+			&::after {
+				position: absolute;
+				content: "";
+				top: 14px;
+				right: 10px;
+				width: 0;
+				height: 0;
+				border: 6px solid transparent;
+				border-color: #fff transparent transparent transparent;
+			}
+			.select-items {
+				position: absolute;
+				background-color: rgb(53, 134, 214);
+				left: 0;
+				z-index: 99;
+				div {
+					color: #ffffff;
+					padding: 8px 16px;
+					border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+					cursor: pointer;
+					&:hover {
+						background-color: rgba(0, 0, 0, 0.1);
+					}
+				}
+			}
+			.select-hide {
+				display: none;
+			}
+		}
+		.search-bar__sort-select-field.select-arrow-active {
+			&::after {
+				border-color: transparent transparent #fff transparent;
+				top: 7px;
+			}
+		}
+	}
+	.book-card {
+		align-items: baseline;
+		background-color: gainsboro;
+		border: 2px solid black;
+		border-radius: 15px;
+		display: flex;
+		flex-direction: column;
+		margin: 5%;
+		min-height: auto;
+		padding: 15px;
+		position: relative;
+		width: 90%;
+		.book-card_image {
+			display: block;
+			height: auto;
+			margin: auto;
+			max-width: 305px;
+			width: 80%;
+		}
+		.book-card_price {
+			margin-bottom: 5px;
+		}
+		.book-card_view-button {
+			background-color: gray;
+			border: 1px solid black;
+			border-radius: 10px;
+			bottom: 15px;
+			color: black;
+			right: 15px;
+			padding: 5px 25px;
+			position: absolute;
+			text-decoration: none;
+		}
+	}
+}
+@media screen and (min-width: 480px) {
+	.search-bar {
+		flex-wrap: nowrap;
+		>* {
+			margin: 0 2% 0 0;
+		}
+		* {
+			width: 200px;
+		}
+	}
+	.book-card {
+		margin: 2.5%;
+		width: 45%;
+		.book-card_image {
+			display: block;
+			height: auto;
+			margin: auto;
+			max-width: 305px;
+			width: 80%;
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	.book-card {
+		margin: 3.166%;
+		width: 27%;
+		.book-card_image {
+			max-width: 305px;
+			width: 80%;
+		}
+	}
+}
